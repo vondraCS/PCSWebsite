@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Mona Sans", sans-serif;
+  font-weight: 400;
+}
+
+.nav_bar {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: red;
+}
+
+.logo_nest {
+  display: flexbox;
+  align-items: center;
+  height: 50px;
+  width: 100px;
+}
+
+.logo_icon {
+  height: 50px;
+  width: 50px;
+}
