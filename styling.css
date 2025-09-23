@@ -11,6 +11,8 @@ body {
 }
 
 .nav_bar {
+  position: fixed;
+  top: 0px;
   display: block;
   height: 50px;
   width: 100%;
