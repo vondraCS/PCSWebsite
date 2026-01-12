@@ -251,6 +251,7 @@ button {
   top: 30vh;
   right: 0px;
   aspect-ratio: 0.4;
+  opacity: 0;
 }
 
 .about_header {
