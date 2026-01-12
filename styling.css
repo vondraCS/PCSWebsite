@@ -1,3 +1,10 @@
+:root {
+  --primary-color: rgb(102, 45, 145);
+  --bg-color: rgb(243, 244, 247);
+  --black: rgb(0, 0, 0);
+  --less-black: rgb(37, 36, 40);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,29 +12,357 @@
   text-decoration: none;
 }
 
+button a {
+  color: var(--bg-color);
+}
+
+a {
+  color: var(--black);
+}
+
 body {
   font-family: "Mona Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 200;
+  background-color: rgb(243, 244, 247);
+  display: flexbox;
+}
+
+#About-Us {
+  scroll-margin-top: 15vh;
+}
+
+#Contact-Us {
+  scroll-margin-top: 15vh;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.logo_icon img {
+  width: 64px;
+  height: 64px;
+  image-resolution: 150, 150;
+}
+
+nav {
+  width: 100%;
+  height: 70px;
+  background-color: var(--bg-color);
+  position: fixed;
+  top: 0px;
+  z-index: 10000;
+  border-bottom: 3px solid var(--primary-color);
 }
 
 .nav_bar {
-  position: fixed;
-  top: 0px;
-  z-index: 1000000;
-  display: block;
-  height: 50px;
-  width: 100%;
-  background-color: rgb(25, 21, 40);
+  display: flex;
+  align-items: normal;
+  justify-content: left;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
-.logo_nest {
-  display: flexbox;
+.inner_nav_bar {
+  display: flex;
   align-items: center;
-  height: 50px;
-  width: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+  justify-content: flex-end;
+  width: 100%;
 }
 
-.logo_icon {
-  height: 50px;
-  width: 50px;
+.nav_bar_filler {
+  width: 100%;
+  height: 70px;
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navigation li a {
+  color: black;
+  font-family: "Ramabhadra", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px 35px;
+}
+
+.page {
+  color: black;
+  background-color: var(--bg-color);
+  width: 100%;
+  margin-top: 20px;
+  height: fit-content;
+  padding-bottom: 30vh;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  text-align: center;
+}
+
+.left_to_right {
+  display: flex;
+  flex-direction: row;
+}
+
+.rows_on_left {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+header {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-size: 3.5vw;
+  font-weight: 800;
+  white-space: nowrap;
+}
+h2 {
+  font-size: 1.25vw;
+  font-weight: 500;
+}
+h3 {
+  font-size: 3.5vw;
+  font-weight: 600;
+  white-space: nowrap;
+}
+h4 {
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 2.5vw;
+  font-weight: 550;
+  white-space: nowrap;
+}
+
+.header {
+  width: 100%;
+}
+
+.subheader {
+  width: 50%;
+}
+
+.landing {
+  display: block;
+  gap: 15px;
+}
+
+.landing_header {
+  width: 100%;
+  gap: 10px;
+}
+
+.landing_achievements {
+  gap: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 20px;
+  margin-bottom: 75px;
+  height: fit-content;
+}
+
+.achievement {
+  display: flex;
+  height: fit-content;
+  width: 90%;
+  margin: 10px;
+}
+
+.achievement_text {
+  display: flex;
+  flex-direction: row;
+  text-wrap: nowrap;
+  justify-content: left;
+  width: 100%;
+  margin-left: 15px;
+  text-align: left;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 550;
+  font-style: italic;
+}
+
+.achievement_icon {
+  aspect-ratio: 1;
+  height: 75px;
+}
+
+.landing_main {
+  gap: 10px;
+}
+
+.landing_group_photo {
+  width: 65%;
+  height: 100%;
+}
+
+.group_photo_caption {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 15%;
+  margin-bottom: 3%;
+}
+
+.caption_text {
+  align-items: end;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 85%;
+  font-size: 175%;
+  font-style: oblique;
+  --background-color: aqua;
+}
+
+button {
+  width: 225px;
+  height: 75px;
+  font-size: 150%;
+  font-weight: 700;
+  font-kerning: normal;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  border-style: none;
+}
+
+.asu_logo {
+  width: 150px;
+  height: 398px;
+  display: block;
+  position: absolute;
+  top: 30%;
+  right: 0;
+}
+
+.about_header {
+  gap: 20px;
+  margin-bottom: 5%;
+}
+
+.header2 {
+  margin-left: -40%;
+  width: 100%;
+  font-weight: 100;
+}
+
+.subheader2 {
+  width: 50%;
+  margin-left: 00%;
+  text-align: left;
+}
+
+.mission_statements_container {
+  margin-top: 2%;
+  width: 70%;
+  gap: 10%;
+}
+
+.mission_statement {
+  width: 20vw;
+  aspect-ratio: 0.75;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.mission_statement_header {
+  font-size: 185%;
+  font-weight: 550;
+  border-bottom: 4px solid var(--primary-color);
+  padding-bottom: 7%;
+  color: var(--less-black);
+}
+
+.mission_statement_body {
+  padding-top: 15%;
+  word-spacing: 0px;
+  line-height: 145%;
+}
+
+.shadow {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.contact_header {
+  gap: 20px;
+}
+
+.contact_main {
+  padding-left: 20%;
+  padding-right: 20%;
+  height: fit-content;
+  padding: 10%;
+  gap: 20px;
+}
+
+.contact_info {
+  justify-content: center;
+  padding-left: 20%;
+  width: 50%;
+  height: 60vh;
+  gap: 75px;
+}
+
+.contact_slot {
+  width: 50%;
+  height: 50%;
+}
+
+.contact_subheading {
+  font-size: 1.5vw;
+  font-weight: 550;
+  margin-bottom: 10%;
+  width: fit-content;
+}
+
+.contact_body {
+  font-size: 1.2vw;
+  font-weight: 200;
+  text-wrap: nowrap;
+  margin-left: 20%;
+  width: 100%;
+  line-height: 150%;
+}
+
+.contact_discord {
+  width: 50%;
+  height: 60vh;
+}
+
+.discord_widget {
+  border-radius: 10px;
+}
+
+.projects_header {
+  gap: 20px;
+}
+
+.projects_main {
+  width: 100%;
+  height: 100%;
+}
+
+.projects_temp_text {
+  font-size: 2vw;
+  font-weight: 600;
 }
