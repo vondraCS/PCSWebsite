@@ -247,10 +247,9 @@ button {
 
 .asu_logo {
   width: 10vw;
-  display: block;
   position: absolute;
-  top: 30%;
-  right: 0%;
+  top: 30vh;
+  right: 0px;
   aspect-ratio: 0.4;
 }
 
