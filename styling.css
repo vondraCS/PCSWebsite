@@ -176,12 +176,13 @@ h5 {
   margin-top: 20px;
   margin-bottom: 75px;
   height: fit-content;
+  width: 65vw;
 }
 
 .achievement {
   display: flex;
   height: fit-content;
-  width: 90%;
+  width: 100%;
   margin: 10px;
 }
 
