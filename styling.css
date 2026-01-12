@@ -245,7 +245,11 @@ button {
   border-radius: 10px;
   border-style: none;
 }
-
+/*<img
+            class="asu_logo"
+            src="/images/ASU-Logo-Cut-Off.png"
+            alt="Arizona State University Logo"
+          />*/
 .asu_logo {
   width: 10vw;
   position: absolute;
