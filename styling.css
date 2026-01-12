@@ -41,66 +41,65 @@ html {
 .logo_container {
   display: flex;
   align-items: center;
-  margin-top: 5px;
 }
 
 .logo_icon img {
-  width: 64px;
-  height: 64px;
-  image-resolution: 150, 150;
+  width: 4vw;
+  aspect-ratio: 1;
 }
 
 nav {
   width: 100%;
-  height: 70px;
+  height: 7.5vh;
   background-color: var(--bg-color);
   position: fixed;
   top: 0px;
   z-index: 10000;
-  border-bottom: 3px solid var(--primary-color);
+  border-bottom: 0.5vh solid var(--primary-color);
 }
 
 .nav_bar {
+  top: 0px;
   display: flex;
-  align-items: normal;
+  align-items: center;
   justify-content: left;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .inner_nav_bar {
   display: flex;
-  align-items: center;
-  margin-left: 50px;
-  margin-right: 50px;
+  align-items: baseline;
+  margin-left: 50%;
   justify-content: flex-end;
   width: 100%;
 }
 
 .nav_bar_filler {
   width: 100%;
-  height: 70px;
+  height: 7.5vh;
 }
 
 .navigation ul {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 5px;
 }
 
 .navigation li a {
   color: black;
   font-family: "Ramabhadra", sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  padding: 10px 35px;
+  font-size: 1vw;
+  padding: 1vw;
+  text-wrap: nowrap;
 }
 
 .page {
   color: black;
   background-color: var(--bg-color);
   width: 100%;
-  margin-top: 20px;
+  margin-top: 2vh;
   height: fit-content;
   padding-bottom: 30vh;
 }
@@ -196,14 +195,14 @@ h5 {
   text-align: left;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
+  font-size: 2vw;
   font-weight: 550;
   font-style: italic;
 }
 
 .achievement_icon {
   aspect-ratio: 1;
-  height: 75px;
+  height: 3vw;
 }
 
 .landing_main {
@@ -212,7 +211,7 @@ h5 {
 
 .landing_group_photo {
   width: 65%;
-  height: 100%;
+  aspect-ratio: 1.25;
 }
 
 .group_photo_caption {
@@ -229,15 +228,15 @@ h5 {
   justify-content: center;
   text-align: center;
   width: 85%;
-  font-size: 175%;
+  font-size: 2vw;
   font-style: oblique;
   --background-color: aqua;
 }
 
 button {
-  width: 225px;
-  height: 75px;
-  font-size: 150%;
+  width: 17vw;
+  aspect-ratio: 3;
+  font-size: 2vw;
   font-weight: 700;
   font-kerning: normal;
   color: white;
@@ -247,12 +246,12 @@ button {
 }
 
 .asu_logo {
-  width: 150px;
-  height: 398px;
+  width: 10vw;
   display: block;
   position: absolute;
   top: 30%;
   right: 0;
+  aspect-ratio: 0.4;
 }
 
 .about_header {
@@ -279,18 +278,23 @@ button {
 }
 
 .mission_statement {
-  width: 20vw;
+  --width: 20vw;
+  height: 40vh;
   aspect-ratio: 0.75;
   padding: 30px;
   border-radius: 10px;
 }
 
 .mission_statement_header {
-  font-size: 185%;
+  font-size: 2vw;
   font-weight: 550;
   border-bottom: 4px solid var(--primary-color);
   padding-bottom: 7%;
   color: var(--less-black);
+}
+
+.mission_statement_text {
+  font-size: 1.2vw;
 }
 
 .mission_statement_body {
@@ -345,12 +349,14 @@ button {
 }
 
 .contact_discord {
-  width: 50%;
+  width: 50vw;
   height: 60vh;
 }
 
 .discord_widget {
   border-radius: 10px;
+  width: 30vw;
+  aspect-ratio: 2;
 }
 
 .projects_header {
