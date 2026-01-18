@@ -1,6 +1,7 @@
 :root {
   --primary-color: rgb(102, 45, 145);
   --bg-color: rgb(243, 244, 247);
+  --darker-bg-color: rgb(217, 220, 225);
   --black: rgb(0, 0, 0);
   --less-black: rgb(37, 36, 40);
 }
@@ -20,11 +21,66 @@ a {
   color: var(--black);
 }
 
+body,
+header,
+footer {
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: var(--bg-color);
+}
+
 body {
-  font-family: "Mona Sans", sans-serif;
   font-weight: 200;
-  background-color: rgb(243, 244, 247);
-  display: flexbox;
+  font-size: 2vw;
+}
+
+header {
+  font-weight: 500;
+}
+
+footer {
+  background-color: var(--darker-bg-color);
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-left: 10%;
+  padding-right: 10%;
+  gap: 2.5vw;
+}
+
+.footer_main_row {
+  padding-right: 2vw;
+  text-wrap: nowrap;
+  border-right: 2px solid var(--primary-color);
+  padding-bottom: 1vh;
+}
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
+  .footer_main_row {
+    border-right: none;
+    border-bottom: 2px solid var(--primary-color);
+  }
+}
+.footer_secondary_rows {
+  gap: 5vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer_main_text {
+  text-wrap: nowrap;
+  font-weight: 400;
+  font-size: clamp(1vw, 1vw + 0.5rem, 1rem);
+}
+.footer_secondary_text {
+  text-wrap: nowrap;
+  font-size: clamp(0.75vw, 0.75vw + 0.375rem, 0.75rem);
 }
 
 #About-Us {
@@ -44,64 +100,70 @@ html {
 }
 
 .logo_icon img {
-  width: 4vw;
+  width: 50px;
   aspect-ratio: 1;
 }
 
 nav {
   width: 100%;
-  height: 7.5vh;
+  overflow-x: hidden;
+
+  height: fit-content;
   background-color: var(--bg-color);
   position: fixed;
   top: 0px;
   z-index: 10000;
   border-bottom: 0.5vh solid var(--primary-color);
+
+  text-align: center;
+}
+
+section {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .nav_bar {
-  top: 0px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: left;
   padding-left: 2%;
   padding-right: 2%;
 }
 
 .inner_nav_bar {
   display: flex;
-  align-items: baseline;
-  margin-left: 50%;
   justify-content: flex-end;
   width: 100%;
 }
 
 .nav_bar_filler {
-  width: 100%;
   height: 7.5vh;
 }
 
 .navigation ul {
   display: flex;
-  align-items: center;
-  gap: 5px;
+  gap: 2vw;
 }
 
 .navigation li a {
   color: black;
-  font-family: "Ramabhadra", sans-serif;
   font-weight: 500;
-  font-size: 1vw;
-  padding: 1vw;
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
+  padding-right: 1vw;
+  padding-left: 1vw;
   text-wrap: nowrap;
+  height: 100%;
 }
 
 .page {
   color: black;
   background-color: var(--bg-color);
   width: 100%;
-  margin-top: 2vh;
+  margin-top: 5vh;
   height: fit-content;
-  padding-bottom: 30vh;
+  padding-bottom: clamp(40px, 20px + 15vh, 15vh);
 }
 
 .centered {
@@ -123,45 +185,63 @@ nav {
   align-items: baseline;
 }
 
-header {
-  font-family: Arial, Helvetica, sans-serif;
-}
 h1 {
-  font-size: 3.5vw;
-  font-weight: 800;
+  /*pcs title*/
+  font-size: clamp(4vw, 2vw + 1rem, 2.5rem);
+  font-weight: 900;
   white-space: nowrap;
 }
 h2 {
-  font-size: 1.25vw;
+  /*pcs subheader*/
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
   font-weight: 500;
 }
 h3 {
-  font-size: 3.5vw;
-  font-weight: 600;
+  /*page header*/
+  font-size: 2.3rem;
+  font-weight: 800;
+
+  padding-left: 5vw;
   white-space: nowrap;
 }
 h4 {
-  font-size: 1.2vw;
+  /*page subheader*/
+  font-size: clamp(1.1rem, 1rem + 10vw, 1.5vw);
   font-weight: 500;
 }
 
 h5 {
-  font-size: 2.5vw;
+  /*our mission subsubheader*/
+  font-size: clamp(2rem, 1rem + 10vw, 3vw);
   font-weight: 550;
   white-space: nowrap;
 }
 
 .header {
   width: 100%;
+  height: fit-content;
 }
 
 .subheader {
-  width: 50%;
+  width: clamp(60vw, 10vw + 15rem, 20rem);
+  height: fit-content;
+}
+
+.header2 {
+  margin-left: -40%;
+  width: 100%;
+  font-weight: 100;
+}
+
+.subheader2 {
+  width: clamp(55vw, 150vw + 30rem, 25rem);
+  margin-left: 00%;
+  text-align: left;
+  margin-bottom: 5vh;
 }
 
 .landing {
   display: block;
-  gap: 15px;
 }
 
 .landing_header {
@@ -171,19 +251,20 @@ h5 {
 
 .landing_achievements {
   gap: 10px;
-  margin-left: 20%;
-  margin-right: 20%;
-  margin-top: 20px;
-  margin-bottom: 75px;
+  margin-top: 10px;
+  margin-bottom: 7.5%;
+  padding-left: 10%;
+  padding-right: 10%;
+
+  width: 80%;
   height: fit-content;
-  width: 65vw;
 }
 
 .achievement {
   display: flex;
-  height: fit-content;
   width: 100%;
-  margin: 10px;
+  height: fit-content;
+  margin: 3%;
 }
 
 .achievement_text {
@@ -191,12 +272,15 @@ h5 {
   flex-direction: row;
   text-wrap: nowrap;
   justify-content: left;
-  width: 100%;
-  margin-left: 15px;
+
+  width: 95%;
+
+  margin-left: 5%;
   text-align: left;
   align-items: center;
+
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 2vw;
+  font-size: 3vw;
   font-weight: 550;
   font-style: italic;
 }
@@ -207,12 +291,20 @@ h5 {
 }
 
 .landing_main {
-  gap: 10px;
+  gap: 2%;
+}
+@media (max-width: 768px) {
+  .landing_main {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+  }
 }
 
 .landing_group_photo {
-  width: 65%;
+  width: clamp(65%, 30% + 40vh, 100vw);
   aspect-ratio: 1.25;
+  border-radius: 10%;
 }
 
 .group_photo_caption {
@@ -220,7 +312,6 @@ h5 {
   align-items: center;
   flex-direction: column-reverse;
   gap: 15%;
-  margin-bottom: 3%;
 }
 
 .caption_text {
@@ -229,21 +320,31 @@ h5 {
   justify-content: center;
   text-align: center;
   width: 85%;
-  font-size: 2vw;
+  --font-size: 2vw;
   font-style: oblique;
-  --background-color: aqua;
 }
 
 button {
   width: 17vw;
   aspect-ratio: 3;
-  font-size: 2vw;
+  font-size: 2rem;
   font-weight: 700;
   font-kerning: normal;
   color: white;
   background-color: var(--primary-color);
   border-radius: 10px;
   border-style: none;
+}
+
+@media (max-width: 768px) {
+  button {
+    width: 40vw;
+    font-size: 1rem;
+  }
+  .group_photo_caption {
+    font-size: 5vw;
+    gap: 2.5vh;
+  }
 }
 /*<img
             class="asu_logo"
@@ -264,46 +365,58 @@ button {
   margin-bottom: 5%;
 }
 
-.header2 {
-  margin-left: -40%;
-  width: 100%;
-  font-weight: 100;
-}
-
-.subheader2 {
-  width: 50%;
-  margin-left: 00%;
-  text-align: left;
-}
-
 .mission_statements_container {
   margin-top: 2%;
-  width: 70%;
-  gap: 10%;
+  width: 75%;
+  gap: 2.5%;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .mission_statements_container {
+    display: flex;
+
+    gap: 15px;
+
+    width: 90%;
+  }
 }
 
 .mission_statement {
-  --width: 20vw;
-  height: 40vh;
+  width: 21.66%;
   aspect-ratio: 0.75;
-  padding: 30px;
-  border-radius: 10px;
+  border-radius: 20px;
+
+  margin-bottom: 2.5%;
+  padding-top: 1%;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-bottom: 2.5%;
+
+  gap: 7.5%;
+}
+@media (max-width: 768px) {
+  .mission_statement {
+    aspect-ratio: unset;
+    width: 100%;
+    gap: 15px;
+    height: fit-content;
+    padding-bottom: 20px;
+  }
 }
 
 .mission_statement_header {
-  font-size: 2vw;
+  font-size: clamp(1.3rem, 1rem + 10vw, 2vw);
   font-weight: 550;
   border-bottom: 4px solid var(--primary-color);
-  padding-bottom: 7%;
+  padding-top: 1.5%;
+  padding-bottom: 3%;
+  text-align: center;
+
   color: var(--less-black);
 }
 
-.mission_statement_text {
-  font-size: 1.2vw;
-}
-
 .mission_statement_body {
-  padding-top: 15%;
+  font-size: clamp(0.75rem, 0.5rem + 1vw, 1vw);
   word-spacing: 0px;
   line-height: 145%;
 }
@@ -313,55 +426,77 @@ button {
 }
 
 .contact_header {
-  gap: 20px;
+  gap: 25px;
+  margin-bottom: 7.5%;
 }
 
 .contact_main {
-  padding-left: 20%;
-  padding-right: 20%;
-  height: fit-content;
-  padding: 10%;
-  gap: 20px;
+  height: clamp(50vh, 75vh, 100vh);
+  width: 100%;
+
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+
+  align-items: flex-start;
+}
+@media (max-width: 768px) {
+  .contact_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 5%;
+
+    width: 85%;
+  }
 }
 
 .contact_info {
   justify-content: center;
-  padding-left: 20%;
-  width: 50%;
-  height: 60vh;
-  gap: 75px;
+  width: 100%;
+  gap: 6vh;
 }
 
 .contact_slot {
-  width: 50%;
-  height: 50%;
+  width: 100%;
 }
 
 .contact_subheading {
-  font-size: 1.5vw;
+  font-size: clamp(1.5rem, 1rem + 10vw, 2vw);
+
   font-weight: 550;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
+
   width: fit-content;
 }
 
 .contact_body {
-  font-size: 1.2vw;
+  font-size: clamp(1rem, 0.5rem + 1vw, 1vw);
   font-weight: 200;
   text-wrap: nowrap;
+
   margin-left: 20%;
   width: 100%;
+
   line-height: 150%;
 }
 
+.contact {
+  height: fit-content;
+  padding-bottom: 25vh;
+}
+
 .contact_discord {
-  width: 50vw;
-  height: 60vh;
+  height: 100%;
+  min-height: 50vh;
+  width: 100%;
 }
 
 .discord_widget {
   border-radius: 10px;
-  width: 30vw;
-  aspect-ratio: 2;
+  height: 100%;
+  max-height: 500px;
+
+  aspect-ratio: 0.75;
 }
 
 .projects_header {
@@ -374,6 +509,7 @@ button {
 }
 
 .projects_temp_text {
-  font-size: 2vw;
+  font-size: 0.8rem;
   font-weight: 600;
+  text-wrap: nowrap;
 }
