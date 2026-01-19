@@ -40,7 +40,7 @@ header {
 }
 
 footer {
-  background-color: var(--darker-bg-color);
+  background-color: aqua; /*var(--darker-bg-color);*/
   padding-top: 5vh;
   padding-bottom: 10vh;
 
