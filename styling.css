@@ -367,7 +367,7 @@ h5 {
   top: 30vh;
   right: 0px;
   aspect-ratio: 0.4;
-  opacity: 0;
+  opacity: 1;
 }
 
 .about_header {
@@ -382,6 +382,9 @@ h5 {
   flex-wrap: wrap;
 }
 @media (max-width: 768px) {
+  .asu_logo {
+    top: 110vh;
+  }
   .mission_statements_container {
     display: flex;
 
