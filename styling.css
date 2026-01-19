@@ -84,11 +84,11 @@ footer {
 }
 
 #About-Us {
-  scroll-margin-top: 15vh;
+  scroll-margin-top: 10vh;
 }
 
 #Contact-Us {
-  scroll-margin-top: 15vh;
+  scroll-margin-top: 10vh;
 }
 html {
   scroll-behavior: smooth;
