@@ -292,6 +292,7 @@ h5 {
 
 .landing_main {
   gap: 2%;
+  padding-right: 4%;
 }
 @media (max-width: 768px) {
   .landing_main {
@@ -320,11 +321,16 @@ h5 {
   justify-content: center;
   text-align: center;
   width: 85%;
-  --font-size: 2vw;
   font-style: oblique;
 }
 
-button {
+.caption_buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+
+.button {
   width: 17vw;
   aspect-ratio: 3;
   font-size: 2rem;
@@ -333,11 +339,15 @@ button {
   color: white;
   background-color: var(--primary-color);
   border-radius: 10px;
+
   border-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
-  button {
+  .button {
     width: 40vw;
     font-size: 1rem;
   }
