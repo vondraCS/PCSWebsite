@@ -306,8 +306,9 @@ h5 {
 }
 
 .landing_group_photo {
-  width: clamp(65%, 30% + 40vh, 100vw);
   aspect-ratio: 1.5;
+  width: clamp(65%, 30% + 40vh, 100vw);
+
   border-radius: 10%;
 }
 
