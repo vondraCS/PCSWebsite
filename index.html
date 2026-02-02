@@ -98,6 +98,7 @@
             src="./images/hero_1500.jpg"
             sizes="(max-width: 1200px) 100vw, 90vw;"
             style="aspect-ratio: 1.5"
+            fetchpriority="high"
             srcset="
               ./images/hero_1500.jpg 1500w,
               ./images/hero_1000.jpg 1000w,
@@ -138,11 +139,31 @@
           </header>
         </div>
       </div>
-      <img
-        class="asu_logo"
-        src="/images/ASULogo.webp"
-        alt="Arizona State University Logo"
-      />
+      <picture>
+        <source
+          type="image/avif"
+          sizes="(max-width: 1200px) 20vw, 10vw;"
+          srcset="
+            ./images/ASULogo_100.avif 100w,
+            ./images/ASULogo_148.avif 148w
+          " />
+        <source
+          type="image/webp"
+          sizes="(max-width: 1200px) 20vw, 10vw;"
+          srcset="
+            ./images/ASULogo_100.webp 100w,
+            ./images/ASULogo_148.webp 148w
+          " />
+        <img
+          class="asu_logo"
+          sizes="(max-width: 1200px) 20vw, 10vw;"
+          style="aspect-ratio: 0.4"
+          fetchpriority="auto"
+          srcset="./images/ASULogo_100.png 100w, ./images/ASULogo_148.png 148w"
+          src="/images/ASULogo_100.png"
+          alt="Arizona State University Logo"
+      /></picture>
+
       <div class="about_mission centered">
         <h5>OUR MISSION</h5>
         <div class="mission_statements_container left_to_right">

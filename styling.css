@@ -377,7 +377,6 @@ img .landing_group_photo {
   position: absolute;
   top: 30vh;
   right: 0px;
-  aspect-ratio: 0.4;
   opacity: 1;
 }
 
@@ -395,6 +394,7 @@ img .landing_group_photo {
 @media (max-width: 768px) {
   .asu_logo {
     top: 110vh;
+    width: 15vw;
   }
   .mission_statements_container {
     display: flex;
