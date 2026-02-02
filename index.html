@@ -74,11 +74,24 @@
         </div>
       </div>
       <div class="landing_main left_to_right">
-        <img
-          class="landing_group_photo"
-          src="/images/GroupPhoto.jpg"
-          alt="Group photo of the club officers"
-        />
+        <picture class="landing_group_photo">
+          <source
+            type="image/webp"
+            sizes="(max-width: 1500px) 100vw, 90vw"
+            srcset="
+              ./images/hero_1500.webp 1500w,
+              ./images/hero_1000.webp 1000w
+            "
+          />
+          <img
+            class="landing_group_photo"
+            src="./images/hero_1500.jpg"
+            sizes="(max-width: 1200px) 30vw, 20vw;"
+            style="aspect-ratio: 1.5"
+            srcset="./images/hero_1500.jpg 1500w, ./images/hero_1000.jpg 1000w"
+            alt="Group photo of the club officers"
+          />
+        </picture>
         <div class="group_photo_caption">
           <div class="caption_buttons">
             <a class="button" href="/index.html#About-Us">What We Do</a>
