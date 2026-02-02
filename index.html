@@ -77,7 +77,7 @@
         <picture class="landing_group_photo">
           <source
             type="image/avif"
-            sizes="(max-width: 1200px) 100vw, 90vw"
+            sizes="(max-width: 768px) 100vw, 90vw"
             srcset="
               ./images/hero_1500.avif 1500w,
               ./images/hero_1000.avif 1000w,
@@ -86,7 +86,7 @@
           />
           <source
             type="image/webp"
-            sizes="(max-width: 1200px) 100vw, 90vw"
+            sizes="(max-width: 768px) 100vw, 90vw"
             srcset="
               ./images/hero_1500.webp 1500w,
               ./images/hero_1000.webp 1000w,
@@ -96,7 +96,7 @@
           <img
             class="landing_group_photo"
             src="./images/hero_1500.jpg"
-            sizes="(max-width: 1200px) 100vw, 90vw;"
+            sizes="(max-width: 768px) 100vw, 90vw;"
             style="aspect-ratio: 1.5"
             fetchpriority="high"
             srcset="
@@ -106,6 +106,7 @@
             "
             alt="Group photo of the club officers"
           />
+          <link rel="preload" />
         </picture>
         <div class="group_photo_caption">
           <div class="caption_buttons">
@@ -142,14 +143,14 @@
       <picture>
         <source
           type="image/avif"
-          sizes="(max-width: 1200px) 20vw, 10vw;"
+          sizes="(max-width: 768px) 20vw, 10vw;"
           srcset="
             ./images/ASULogo_100.avif 100w,
             ./images/ASULogo_200.avif 200w
           " />
         <img
           class="asu_logo"
-          sizes="(max-width: 1200px) 20vw, 10vw;"
+          sizes="(max-width: 768px) 20vw, 10vw;"
           style="aspect-ratio: 0.4"
           fetchpriority="auto"
           srcset="./images/ASULogo_100.png 100w, ./images/ASULogo_200.png 200w"
