@@ -76,19 +76,33 @@
       <div class="landing_main left_to_right">
         <picture class="landing_group_photo">
           <source
+            type="image/avif"
+            sizes="(max-width: 1200px) 100vw, 90vw"
+            srcset="
+              ./images/hero_1500.avif 1500w,
+              ./images/hero_1000.avif 1000w,
+              ./images/hero_750.avif   750w
+            "
+          />
+          <source
             type="image/webp"
-            sizes="(max-width: 1500px) 100vw, 90vw"
+            sizes="(max-width: 1200px) 100vw, 90vw"
             srcset="
               ./images/hero_1500.webp 1500w,
-              ./images/hero_1000.webp 1000w
+              ./images/hero_1000.webp 1000w,
+              ./images/hero_750.webp   750w
             "
           />
           <img
             class="landing_group_photo"
             src="./images/hero_1500.jpg"
-            sizes="(max-width: 1200px) 30vw, 20vw;"
+            sizes="(max-width: 1200px) 100vw, 90vw;"
             style="aspect-ratio: 1.5"
-            srcset="./images/hero_1500.jpg 1500w, ./images/hero_1000.jpg 1000w"
+            srcset="
+              ./images/hero_1500.jpg 1500w,
+              ./images/hero_1000.jpg 1000w,
+              ./images/hero_750.jpg   750w
+            "
             alt="Group photo of the club officers"
           />
         </picture>
