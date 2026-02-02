@@ -393,7 +393,7 @@ img .landing_group_photo {
 }
 @media (max-width: 768px) {
   .asu_logo {
-    top: 110vh;
+    top: 100%;
     width: 15vw;
   }
   .mission_statements_container {
